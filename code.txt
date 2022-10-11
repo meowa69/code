@@ -1,0 +1,321 @@
+REBOTE
+
+package prac;
+import java.util.*;
+public class waybuot {
+    static int bal = 0;
+    public static void main(String[] args){
+
+        
+        
+        Scanner sc = new Scanner(System.in);
+        System.out.print("ATM\n");
+        System.out.println("[1] withdraw");
+        System.out.println("[2] deposit");
+        System.out.println("[3] balance");
+        System.out.println("[4] Exit");
+
+        for(int i=0; i<1;){
+        System.out.print("\nEnter your choice: ");
+        int wdrw = sc.nextInt();
+        
+        
+        switch(wdrw){
+            case 1:
+                if(bal > wdrw){
+                    Scanner wdrw1 = new Scanner(System.in);
+                    System.out.print("\nEnter amount to withdraw: ");
+                    int wdn = wdrw1.nextInt();
+                    int bal1 = bal-wdn;
+                    if(bal1<100){
+                    System.out.println("Please have at least 100php inside your ATM to withdraw");
+                    }
+                    else if(wdn<0){
+                        System.out.println("Negative value is not allowed. Please try agaian.");
+                        break;
+                    }
+                        
+                 else{
+                    bal = bal - wdn;
+                    System.out.println("you withdraw: " + wdn);
+                    i=0;
+                    }
+                break;
+
+                }else if(bal==0)
+                {
+                        System.out.println("\nYour current balance is: " + bal);
+                        i=0;
+            
+                }
+                break;
+
+            case 2:
+                Scanner input = new Scanner(System.in);
+                System.out.print("\nEnter your amount to deposit: ");
+                int dep = input.nextInt();
+                
+                if(dep<0){
+                    System.out.println("Negative value is not allowed. Please try agaian.");
+                    break;
+
+                }else
+                    bal = dep + bal;
+                    System.out.println("Your current balance: " + bal);
+                break;
+
+            case 3:
+                System.out.println("\nYour balance now is: " + bal);
+                break;
+
+            case 4:
+                System.exit(0);
+        
+            }
+        }
+    
+    }
+}
+
+--------------------------
+
+package prac;
+import java.util.*;
+
+public class prac {
+
+    public static void main(String[] args)
+
+    {
+        double weight, height, age, i, BMR;
+        double w = 13.75, h = 5.003, a = 6.755;
+
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Weight in kg: ");
+        weight = sc.nextDouble();
+        System.out.println(weight);
+
+        double r1 = weight * w;
+        System.out.println("The result is: " + r1);
+
+        Scanner sc2 = new Scanner(System.in);
+        System.out.print("\nHeight in cm: ");
+        height = sc2.nextDouble();
+        System.out.println(height);
+
+        double r2 = height * h;
+        System.out.println("The result is: " + r2);
+
+        Scanner sc3 = new Scanner(System.in);
+        System.out.print("\nAge in years: ");
+        age = sc3.nextDouble();
+        System.out.println(age);
+
+        double r3 = age * a;
+        System.out.println("The result is: " + r3);
+
+        i = +r1 + r2 - r3;
+        System.out.println("\nresult: " + i);
+
+        BMR = 66.47 + i;
+        System.out.println("\nThe BMR is: " + BMR);
+
+        if (BMR < 2500) {
+            System.out.println("\nYour BMR is too low. You need calories");
+        } else if (BMR > 2500) {
+            System.out.println("\nYour BMR is too high. You need to exercise to lost calories.");
+        } else if (BMR == 2500) {
+            System.out.println("\nYour BMR is moderate. You're normal.");
+        } else {
+            System.out.println("Invalid input,");
+        }
+    }
+
+}
+
+---------------------------
+
+package prac;
+
+import java.util.*;
+
+public class fgn {
+
+    public static void main(String[] args){
+
+        int num1, num2, num3;
+        Scanner sc = new Scanner(System.in);
+        for(int x=0; x < 1;){
+        System.out.print("\nInput first number: ");
+        num1 = sc.nextInt();
+        System.out.print("Input second number: ");
+        num2 = sc.nextInt();
+        System.out.print("Input third number: ");
+        num3 = sc.nextInt();
+
+        if(num1 > num2){
+            System.out.println("The greatest number is: " + num1);
+        }else if(num2 > num3){
+            System.out.println("The greatest number is: " + num2);
+        }else if(num3 > num1){
+            System.out.println("The greatest number is: " + num3);
+        }
+            String scn= sc.nextLine();
+            if(scn.equalsIgnoreCase("")){
+                x=0;
+            }
+        }
+    }
+}
+
+-------------------------
+
+package dw;
+import java.util.*;
+public class quiz {
+    
+ 
+    public static void main(String[] args){
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("[1] Monday");
+        System.out.println("[2] Tuesday");
+        System.out.println("[3] Wednesday");
+        System.out.println("[4] Thursday");
+        System.out.println("[5] Friday");
+        System.out.println("[6] Saturday");
+        System.out.println("[7] Sunday");
+        System.out.print("\nSelect: ");
+        int slct = sc.nextInt();
+
+        switch(slct){
+            case 1:
+            System.out.println("Monday");
+            break;
+
+            case 2:
+            System.out.println("Tuesday");
+            break;
+
+            case 3:
+            System.out.println("Wednesday");
+            break;
+
+            case 4:
+            System.out.println("Thursday");
+            break;
+
+            case 5:
+            System.out.println("Friday");
+            break;
+
+            case 6:
+            System.out.println("Saturday");
+            break;
+
+            case 7:
+            System.out.println("Sunday");
+            break;
+
+            
+        }
+    
+    }
+}
+
+---------------------------------
+
+package dw;
+import java.util.*;
+public class oezn {
+    
+    public static void main(String[] args){
+        
+        int num=0;
+        for(int x=0;x<1;){
+            
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter number: ");
+        num = sc.nextInt();
+        
+        if(num<0){
+            System.out.println("Negative");
+        }else if(num==0){
+            System.out.println("Zero");
+        }else if(num%2!=0){
+            System.out.println("Odd");
+        }else if(num%2==0){
+            System.out.println("Even");
+        }
+        Scanner sc1 = new Scanner(System.in);
+        System.out.print("\nDo you want to order again? (yes / no): ");
+        String yn = sc1.nextLine();
+        
+        if (yn.equalsIgnoreCase("yes")) {
+            x = 0;
+
+        } else if (yn.equalsIgnoreCase("no")) {
+            x = 1;
+            }
+        }
+    }
+}
+
+------------------------------------
+
+package dw;
+
+public class num {
+    
+    public static void main(String[] args){
+        int i;
+        i=1;
+
+        System.out.println("The natural numbers are: ");
+       do{
+        System.out.println(i);
+        i++;
+       }while(i<=10);
+       
+
+    }
+}
+
+-------------------------------------
+package dw;
+import java.util.*;
+public class fl {
+    
+    public static void main(String[] args){
+
+        Scanner flt = new Scanner(System.in);
+        System.out.print("Enter 1st float: ");
+        float f1 = flt.nextFloat();
+        System.out.print("Enter 2nd float: ");
+        float f2 = flt.nextFloat();
+
+        if(f1==f2){
+        System.out.println("Two floats are the same.");
+        }else if(f1 != f2)
+        System.out.println("Two floats are not the same.");
+    }
+}
+
+----------------------------------------------
+
+package dw;
+
+// import java.util.*;
+public class dw {
+    public static void main(String[] args) {
+        int x = 0;
+
+        do {
+            System.out.println(x);
+            x++;
+        } while (x <= 5);
+
+    }
+
+}
